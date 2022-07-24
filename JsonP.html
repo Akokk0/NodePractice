@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>JsonP</title>
+</head>
+<body>
+<button id="btn_JsonP">JsonP</button>
+</body>
+
+<script>
+
+    $(function () {
+        $("#btn_JsonP").click(function () {
+            $.ajax({
+                method: 'GET',
+                url: "http://127.0.0.1/api/jsonp",
+                dataType: "jsonp",
+                success: function (res) {
+                    console.log(res);
+                }
+            });
+        });
+    })
+
+
+</script>
+</html>
